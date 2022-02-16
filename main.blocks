@@ -1,4 +1,13 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="pxt-on-start"></block>
-  <block type="device_forever"></block>
-</xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="%|7to=QapZ@)dK}w-;F?">light</variable></variables><block type="pxt-on-start" id="LT@.GIDF?15T=O:ZAImg" x="20" y="20"/><block type="device_forever" id="J+ScsUwC{lF7!He-YxB|" x="225" y="20"><statement name="HANDLER"><block type="variables_set" id="NZ9%79t$f*^iZ,4cFQV^"><field name="VAR" id="%|7to=QapZ@)dK}w-;F?">light</field><value name="VALUE"><shadow type="math_number" id="Z-T84eFcpH}L15y0BZ=)"><field name="NUM">0</field></shadow><block type="device_get_analog_pin" id="-X:O52T2D%eA^d]GZ}$C"><field name="name">AnalogPin.P0</field></block></value><next><block type="controls_if" id="KZ/Rwgj/;fTPeHY!O#0x"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean" id="`hU[JI.f]^am0Mc[7vf3"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="{P-m=e7G+QB0+~{c{|1b"><field name="OP">GT</field><value name="A"><shadow type="math_number" id="$x+2ww#u6]yl4u2`6igf"><field name="NUM">0</field></shadow><block type="variables_get" id="P%GXK{54WpDH=jCQ7wHz"><field name="VAR" id="%|7to=QapZ@)dK}w-;F?">light</field></block></value><value name="B"><shadow type="math_number" id="X7{X$TL2/4U8QP6:W8[q"><field name="NUM">200</field></shadow></value></block></value><statement name="DO0"><block type="device_show_leds" id="@u$0=B[8M^d4v2/H}8_Z"><field name="LEDS">`
+        # . # . # 
+        . # # # . 
+        # # # # # 
+        . # # # . 
+        # . # . #
+        `</field></block></statement><statement name="ELSE"><block type="device_show_leds" id="pDID1sEdp;z-HOgzH?,G"><field name="LEDS">`
+        # # # . . 
+        . # # # . 
+        . . # # . 
+        . # # # . 
+        # # # . .
+        `</field></block></statement></block></next></block></statement></block></xml>
