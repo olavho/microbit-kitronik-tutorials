@@ -1,10 +1,16 @@
-let strip = neopixel.create(DigitalPin.P0, 5, NeoPixelMode.RGB)
-let strip2 = neopixel.create(DigitalPin.P1, 5, NeoPixelMode.RGB)
+let position = 0
+let ring = neopixel.create(DigitalPin.P0, 12, NeoPixelMode.RGB)
+ring.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+ring.show()
 basic.forever(function () {
-    strip.clear()
-    strip.range(0, input.lightLevel() / 30).showColor(neopixel.colors(NeoPixelColors.Yellow))
-    strip.show()
-    strip2.clear()
-    strip2.range(0, Math.abs(input.acceleration(Dimension.X)) / 200).showColor(neopixel.colors(NeoPixelColors.Blue))
-    strip2.show()
+    if (position < 11) {
+        ring.rotate(1)
+        position = position + 1
+    } else {
+        ring.clear()
+        ring.setPixelColor(0, NeoPixelColors.Red)
+        position = 0
+    }
+    ring.show()
+    pause(100);
 })
